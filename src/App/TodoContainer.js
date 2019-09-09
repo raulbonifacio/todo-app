@@ -31,7 +31,6 @@ export default class TodoContainer extends Component {
         };
     }
 
-
     toggleTodo = ({id}) => this.setState({todos: this.state.todos.map(todo => todo.id !== id ? todo : { ...todo, done: !todo.done })});
 
     createTodo = ({task}) => this.setState({index: this.state.index + 1, todos:[...this.state.todos, {id: this.state.index + 1, task: task, done: false}]});
@@ -67,7 +66,7 @@ export default class TodoContainer extends Component {
                                 toggleCompleted={ this.toggleCompleted }
                                 removeCompleted={ this.removeCompleted }
                                 showCompleted={ this.state.showCompleted }
-                            />
+                                />
                         </div>
                     </div>
                 </div>

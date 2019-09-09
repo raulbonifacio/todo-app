@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 export default class TodoOptions extends Component {
 
     toggleCompletedButton() {
-
         if(this.props.showCompleted)
         {
             return(
@@ -35,13 +34,13 @@ export default class TodoOptions extends Component {
             <div className="card-footer">
                 <div className="form-row">
                     <div className="col">
-                        {this.removeCompletedButton()}
+                        { this.removeCompletedButton() }
                     </div>
                     <div className="col text-right">
-                        {this.toggleCompletedButton()}
+                        { this.toggleCompletedButton() }
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
